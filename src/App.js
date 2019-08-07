@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Button from "@material-ui/core/Button";
 import "./App.css";
 
 class App extends Component {
@@ -30,12 +31,16 @@ class App extends Component {
         {projects.length ? (
           projects.map((project, index) => (
             <div key={project.name}>
+              <Button
+                variant="outlined"
+                color="secondary"
+                href={project.html_url}
+              >
+                {project.name}
+              </Button>
               <p>
-                <b>
-                  <a href={project.html_url}>{project.name}</a>
-                </b>
+                <i>{project.description}</i>
               </p>
-              <p>{project.description}</p>
             </div>
           ))
         ) : (
