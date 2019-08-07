@@ -33,6 +33,7 @@ class App extends Component {
             <div key={project.name}>
               <Button
                 variant="outlined"
+                size="large"
                 color="secondary"
                 href={project.html_url}
               >
